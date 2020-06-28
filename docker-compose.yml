@@ -4,7 +4,20 @@ services:
     build: .
     environment:
       BUNDLE_PATH: /opt/app/vendor/bundle
+      POSTGRES_HOST: postgresql
+      POSTGRES_USER: nexttodo
+      POSTGRES_PASSWORD: nexttodo
+      POSTGRES_DB: nexttodo
+    depends_on:
+      - postgresql
     volumes:
       - ./:/opt/app
     ports:
       - 3000:3000
+
+  postgresql:
+    image: postgres:12.3
+    environment:
+      POSTGRES_USER: nexttodo
+      POSTGRES_PASSWORD: nexttodo
+      POSTGRES_DB: nexttodo
