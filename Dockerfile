@@ -1,4 +1,4 @@
 FROM ruby:2.7.1
-RUN gem install rails
 
 WORKDIR /opt/app
+CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]

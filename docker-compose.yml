@@ -6,3 +6,5 @@ services:
       BUNDLE_PATH: /opt/app/vendor/bundle
     volumes:
       - ./:/opt/app
+    ports:
+      - 3000:3000
