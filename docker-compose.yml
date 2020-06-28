@@ -1,0 +1,8 @@
+version: '3'
+services:
+  backend:
+    build: .
+    environment:
+      BUNDLE_PATH: /opt/app/vendor/bundle
+    volumes:
+      - ./:/opt/app
